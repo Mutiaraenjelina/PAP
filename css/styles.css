@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 1326px;
+  height: 90px;
+  background-color: #0477bf; /* Warna latar belakang navbar yang diperbarui */
+  color: #f2f2f2; /* Warna teks, bisa disesuaikan */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky; /* Menambahkan properti position: sticky */
+  top: 0; /* Menetapkan posisi tepat di atas layar saat navbar menjadi sticky */
+  z-index: 100; /* Menetapkan z-index agar navbar tetap di atas elemen lain */
+}
+
+.navbar-logo {
+  margin-left: 50px; /* Menambahkan margin ke sisi kanan */
+}
+
+.navbar-logo img {
+  width: 60px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto; /* Biarkan tinggi mengikuti lebar untuk menjaga rasio aspek */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 50px; /* Menambahkan margin ke sisi kanan setiap item menu */
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #f2f2f2; /* Warna teks menu, bisa disesuaikan */
+  font-weight: bold;
+  font-size: 16px;
+}
