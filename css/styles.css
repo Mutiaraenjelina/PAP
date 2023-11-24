@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-  width: 1326px;
+  width: 1309px;
   height: 90px;
   background-color: #0477bf; /* Warna latar belakang navbar yang diperbarui */
   color: #f2f2f2; /* Warna teks, bisa disesuaikan */
@@ -16,7 +16,9 @@ body {
   top: 0; /* Menetapkan posisi tepat di atas layar saat navbar menjadi sticky */
   z-index: 100; /* Menetapkan z-index agar navbar tetap di atas elemen lain */
 }
-
+.teks-logo {
+  margin-right: 300px; /* Menambahkan margin ke sisi kanan */
+}
 .navbar-logo {
   margin-left: 50px; /* Menambahkan margin ke sisi kanan */
 }
@@ -29,8 +31,8 @@ body {
 .navbar-menu {
   list-style: none;
   display: flex;
-  margin: 0;
   padding: 0;
+  margin-right: 50px;
 }
 
 .navbar-menu li {
@@ -42,4 +44,167 @@ body {
   color: #f2f2f2; /* Warna teks menu, bisa disesuaikan */
   font-weight: bold;
   font-size: 16px;
+}
+-- carousel .carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+ul.slides {
+  display: block;
+  position: relative;
+  height: 550px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+-- konten sambutan .sambutan {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #0477bf;
+  color: #fff;
+}
+
+.sambutan h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Menjadikan judul terpusat */
+}
+/* konten sambutan*/
+
+.gambar-dan-teks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Atur margin-top sesuai kebutuhan */
+}
+
+.gambar-sambutan {
+  width: 500px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  margin-right: 50px; /* Atur margin-right sesuai kebutuhan */
+}
+
+.teks-sambutan {
+  max-width: 500px; /* Sesuaikan lebar teks sesuai kebutuhan */
+  text-align: left; /* Sesuaikan sesuai keinginan Anda (left, right, atau center) */
 }
