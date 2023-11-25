@@ -3,8 +3,9 @@ body {
   padding: 0;
 }
 
+/* navbar */
 .navbar {
-  width: 1309px;
+  width: auto;
   height: 90px;
   background-color: #0477bf; /* Warna latar belakang navbar yang diperbarui */
   color: #f2f2f2; /* Warna teks, bisa disesuaikan */
@@ -16,6 +17,7 @@ body {
   top: 0; /* Menetapkan posisi tepat di atas layar saat navbar menjadi sticky */
   z-index: 1000; /* Menetapkan z-index agar navbar tetap di atas elemen lain */
 }
+
 .teks-logo {
   margin-right: 180px; /* Menambahkan margin ke sisi kanan */
   font-family: "Raleway", sans-serif;
@@ -108,9 +110,85 @@ body {
   outline: 2px solid var(--c);
   outline-offset: 5px;
 }
+/* end navbar */
 
-/* Search icon */
+/* footer */
+.footer-content {
+  background-color: #0477bf;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin-left: 20px;
+  max-width: 100px;
+}
 
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.address {
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.social-icons a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list p {
+  margin: 0; /* Menghapus margin bawaan pada elemen <p> */
+}
+.teksfot-logo {
+  margin-left: 10px; /* Menambahkan margin ke sisi kanan */
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  max-width: 300px;
+}
+
+.teksfot-logo h2 {
+  font-size: 25px; /* Atur ukuran font untuk h2 */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+
+.teksfot-logo p {
+  font-size: 16px; /* Atur ukuran font untuk p */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+.copyright {
+  background-color: #0477bf;
+  color: white;
+  padding: 10px;
+}
+.copyright p {
+  margin-top: 0px;
+  margin-left: 60px;
+}
+/* end footer */
+
+/*------------------------------------------------------------- Dasboard.html-----------------------------------------------------------*/
 /* Carousel */
 .carousel {
   margin-left: 0%;
@@ -416,76 +494,4 @@ input:checked + .slide-container .nav label {
   width: autopx; /* Lebar div */
   height: 360px; /* Tinggi div */
 }
-.footer-content {
-  background-color: #0477bf;
-  color: white;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  margin-left: 20px;
-  max-width: 100px;
-}
-
-.logo img {
-  width: 100px;
-  height: auto;
-}
-
-.address {
-  flex-grow: 1;
-  margin-left: 50px;
-  margin-right: 0px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 40px;
-}
-
-.social-icons a {
-  margin-left: 20px;
-  color: white;
-  text-decoration: none;
-}
-.list {
-  list-style: none;
-  padding: 0;
-}
-
-.list li {
-  margin-bottom: 10px;
-}
-
-.list p {
-  margin: 0; /* Menghapus margin bawaan pada elemen <p> */
-}
-.teksfot-logo {
-  margin-left: 10px; /* Menambahkan margin ke sisi kanan */
-  margin-right: 10px;
-  font-family: "Raleway", sans-serif;
-  max-width: 300px;
-}
-
-.teksfot-logo h2 {
-  font-size: 25px; /* Atur ukuran font untuk h2 */
-  margin: 1px; /* Atur jarak bawah antara h2 dan p */
-}
-
-.teksfot-logo p {
-  font-size: 16px; /* Atur ukuran font untuk p */
-  margin: 1px; /* Atur jarak bawah antara h2 dan p */
-}
-.copyright {
-  background-color: #0477bf;
-  color: white;
-  padding: 10px;
-}
-.copyright p {
-  margin-top: 0px;
-  margin-left: 60px;
-}
+/*-------------------------------------------------------------End Dasboard.html-----------------------------------------------------------*/
