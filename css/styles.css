@@ -14,11 +14,23 @@ body {
   padding: 0 20px;
   position: sticky; /* Menambahkan properti position: sticky */
   top: 0; /* Menetapkan posisi tepat di atas layar saat navbar menjadi sticky */
-  z-index: 100; /* Menetapkan z-index agar navbar tetap di atas elemen lain */
+  z-index: 1000; /* Menetapkan z-index agar navbar tetap di atas elemen lain */
 }
 .teks-logo {
-  margin-right: 300px; /* Menambahkan margin ke sisi kanan */
+  margin-right: 180px; /* Menambahkan margin ke sisi kanan */
+  font-family: "Raleway", sans-serif;
 }
+/* Mengatur ukuran teks logo */
+.teks-logo h2 {
+  font-size: 20px; /* Atur ukuran font untuk h2 */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+
+.teks-logo p {
+  font-size: 13px; /* Atur ukuran font untuk p */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+
 .navbar-logo {
   margin-left: 50px; /* Menambahkan margin ke sisi kanan */
 }
@@ -32,7 +44,7 @@ body {
   list-style: none;
   display: flex;
   padding: 0;
-  margin-right: 50px;
+  margin-right: 25px;
 }
 
 .navbar-menu li {
@@ -44,10 +56,65 @@ body {
   color: #f2f2f2; /* Warna teks menu, bisa disesuaikan */
   font-weight: bold;
   font-size: 16px;
+  font-family: "Raleway", sans-serif;
 }
--- carousel .carousel {
-  margin-left: 15%;
-  margin-right: 15%;
+
+.icon_menu {
+  --s: 25px; /* control the size */
+  --c: #f2f2f2; /* the color */
+
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s) / 2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+  background: var(--_g2) left var(--_p, 0px) top, var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top, var(--_g2) right var(--_p, 0px) top, var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+  background-size: 20% 80%, 40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  cursor: pointer;
+  transition: background-position 0.3s var(--_s, 0.3s), clip-path 0s var(--_s, 0.6s);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.icon_menu:before,
+.icon_menu:after {
+  content: "";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform 0.3s calc(0.3s - var(--_s, 0.3s));
+}
+
+.icon_menu:checked {
+  clip-path: inset(0);
+  --_p: calc(-1 * var(--s));
+  --_s: 0s;
+}
+.icon_menu:checked:before {
+  transform: rotate(45deg);
+}
+.icon_menu:checked:after {
+  transform: rotate(-45deg);
+}
+.icon_menu:focus-visible {
+  clip-path: none;
+  border: none;
+  outline: 2px solid var(--c);
+  outline-offset: 5px;
+}
+
+/* Search icon */
+
+/* Carousel */
+.carousel {
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
 ul.slides {
@@ -144,8 +211,8 @@ ul.slides input {
 
 .carousel-dots .carousel-dot {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.5;
@@ -175,36 +242,250 @@ input:checked + .slide-container .nav label {
   display: block;
 }
 
--- konten sambutan .sambutan {
+/* Konten Sambutan */
+.sambutan {
   text-align: center;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #0477bf;
-  color: #fff;
+  margin: 20px;
+  margin-bottom: 30px;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000;
 }
 
 .sambutan h1 {
   font-size: 30px;
-  margin: 0;
+  margin-top: 50px;
   padding: 0;
   text-align: center; /* Menjadikan judul terpusat */
+  font-family: "Raleway", sans-serif;
 }
-/* konten sambutan*/
+
+/* gambar dan teks konten sambutan*/
 
 .gambar-dan-teks {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px; /* Atur margin-top sesuai kebutuhan */
+  margin-top: 35px; /* Atur margin-top sesuai kebutuhan */
 }
 
 .gambar-sambutan {
-  width: 500px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  width: 580px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
   height: auto;
   margin-right: 50px; /* Atur margin-right sesuai kebutuhan */
 }
 
 .teks-sambutan {
-  max-width: 500px; /* Sesuaikan lebar teks sesuai kebutuhan */
+  margin-top: 0px;
+  max-width: 580px; /* Sesuaikan lebar teks sesuai kebutuhan */
   text-align: left; /* Sesuaikan sesuai keinginan Anda (left, right, atau center) */
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 180px;
+}
+.button_next {
+  background-color: #0477bf; /* Warna biru */
+  color: #ffffff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding pada tombol */
+  border: none; /* Hapus border */
+  border-radius: 4px; /* Sudut bulat pada tombol */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan sedikit */
+  cursor: pointer; /* Pointer ketika diarahkan */
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+  float: right;
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+}
+
+.button_next:hover {
+  background-color: #1f628c; /* Warna biru yang berbeda saat dihover */
+}
+.pengumuman {
+  background-color: #f9f9f9;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+.pengumuman h1 {
+  font-size: 30px;
+  margin-top: 50px;
+  padding: 0;
+  text-align: center; /* Menjadikan judul terpusat */
+  font-family: "Raleway", sans-serif;
+}
+
+/* Card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative; /* Tambahkan posisi relatif */
+}
+.card {
+  width: 380px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 17px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 16px;
+}
+.card-content h3 {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.card-content p {
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.date {
+  display: flex;
+  align-items: center;
+}
+.date p {
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-left: 10px;
+}
+
+/* Keunggukan-del */
+.line-content {
+  background-color: #0477bf;
+  width: autopx; /* Lebar div */
+  height: 200px; /* Tinggi div */
+  border: 1px solid #0477bf;
+}
+.cardhor-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  position: relative; /* Tambahkan posisi relatif */
+}
+
+.cardhor {
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.1em rgba(0, 0, 0, 0.219);
+  width: 580px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.cardhor_hero p {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+.cardher_img {
+  width: 10%;
+}
+
+.cardhor_content {
+  flex: 1;
+  padding: 5px 35px 25px 35px;
+}
+.cardhor_content h3 {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.cardhor_content p {
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.line-content2 {
+  background-color: #fff;
+  width: autopx; /* Lebar div */
+  height: 360px; /* Tinggi div */
+}
+.footer-content {
+  background-color: #0477bf;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin-left: 20px;
+  max-width: 100px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.address {
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.social-icons a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list p {
+  margin: 0; /* Menghapus margin bawaan pada elemen <p> */
+}
+.teksfot-logo {
+  margin-left: 10px; /* Menambahkan margin ke sisi kanan */
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  max-width: 300px;
+}
+
+.teksfot-logo h2 {
+  font-size: 25px; /* Atur ukuran font untuk h2 */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+
+.teksfot-logo p {
+  font-size: 16px; /* Atur ukuran font untuk p */
+  margin: 1px; /* Atur jarak bawah antara h2 dan p */
+}
+.copyright {
+  background-color: #0477bf;
+  color: white;
+  padding: 10px;
+}
+.copyright p {
+  margin-top: 0px;
+  margin-left: 60px;
 }
