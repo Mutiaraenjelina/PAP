@@ -2,6 +2,33 @@ body {
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-size: 30px;
+  margin-top: 50px;
+  padding: 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+p {
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+h2 {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 0;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+}
+h3 {
+  font-size: 20px;
+  padding: 0;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+}
 
 /* navbar */
 .navbar {
@@ -19,7 +46,7 @@ body {
 }
 
 .teks-logo {
-  margin-right: 180px; /* Menambahkan margin ke sisi kanan */
+  margin-right: 250px; /* Menambahkan margin ke sisi kanan */
   font-family: "Raleway", sans-serif;
 }
 /* Mengatur ukuran teks logo */
@@ -143,6 +170,10 @@ body {
   align-items: center;
   margin-right: 40px;
 }
+.Sosmed h3 {
+  margin-top: 0px;
+  margin-left: 20px;
+}
 
 .social-icons a {
   margin-left: 20px;
@@ -155,7 +186,7 @@ body {
 }
 
 .list li {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .list p {
@@ -321,6 +352,9 @@ input:checked + .slide-container .nav label {
 }
 
 /* Konten Sambutan */
+.hr1 {
+  width: 95%;
+}
 .sambutan {
   text-align: center;
   margin: 20px;
@@ -340,11 +374,18 @@ input:checked + .slide-container .nav label {
 
 /* gambar dan teks konten sambutan*/
 
-.gambar-dan-teks {
+.gambar-dan-teks-1 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 35px; /* Atur margin-top sesuai kebutuhan */
+}
+.gambar-dan-teks-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px; /* Atur margin-top sesuai kebutuhan */
+  flex-direction: row-reverse; /* Membalik arah flex container */
 }
 
 .gambar-sambutan {
@@ -352,7 +393,11 @@ input:checked + .slide-container .nav label {
   height: auto;
   margin-right: 50px; /* Atur margin-right sesuai kebutuhan */
 }
-
+.gambar-sambutan-2 {
+  width: 580px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  margin-left: 50px; /* Atur margin-right sesuai kebutuhan */
+}
 .teks-sambutan {
   margin-top: 0px;
   max-width: 580px; /* Sesuaikan lebar teks sesuai kebutuhan */
@@ -361,7 +406,7 @@ input:checked + .slide-container .nav label {
   letter-spacing: 0.24px;
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 180px;
+  margin-bottom: 100px;
 }
 .button_next {
   background-color: #0477bf; /* Warna biru */
@@ -381,10 +426,12 @@ input:checked + .slide-container .nav label {
 .button_next:hover {
   background-color: #1f628c; /* Warna biru yang berbeda saat dihover */
 }
+
+/* Pengumuman */
 .pengumuman {
   background-color: #f9f9f9;
+  height: 770px;
   padding: 2px;
-  margin-bottom: 20px;
 }
 .pengumuman h1 {
   font-size: 30px;
@@ -400,6 +447,7 @@ input:checked + .slide-container .nav label {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-bottom: 10px;
   position: relative; /* Tambahkan posisi relatif */
 }
 .card {
@@ -495,3 +543,20 @@ input:checked + .slide-container .nav label {
   height: 360px; /* Tinggi div */
 }
 /*-------------------------------------------------------------End Dasboard.html-----------------------------------------------------------*/
+
+/*-------------------------------------------------------------Pendidikan.html-----------------------------------------------------------*/
+
+.card2 {
+  width: 380px;
+  height: 225px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 17px;
+}
+
+.card2 img {
+  width: 100%;
+  height: auto;
+}
