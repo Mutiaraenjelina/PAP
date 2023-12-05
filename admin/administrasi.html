@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrasi</title>
+    <link rel="stylesheet" href="style_admin.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="filterEntries">
+                <div class="entries">
+                    show <select name="" id="table-size">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </div>
+                <div class="filter">
+                    <label for="search">Search : </label>
+                    <input type="search" name="" id="search" placeholder="Enter title">
+
+                </div>
+            </div>
+            <div class="addPengumuman">
+                <button>Tambah Pengumuman</button>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+                <tr class="heading">
+                    <th>No</th>
+                    <th>Judul Pengumuman</th>
+                    <th>Deskripsi Pengumuman</th>
+                    <th>Gambar</th>
+                    <th>Tanggal Upload</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="pengumumanInfo">
+                <!--
+                <tr>
+                    <td class="empty" colspan="11" align="center">No Data Available in table </td>
+                </tr>
+                -->
+                <!--
+                <tr>
+                    <td>1</td>
+                    <td>Pak Luhut datang ke IT DEL</td>
+                    <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+                    <td><img src="./img/pic1.png" alt="" width="40" height="40"></td>
+                    <td>03/11/2023</td>
+                    <td>
+                        <button>view</button>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Pak Luhut datang ke IT DEL</td>
+                    <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+                    <td><img src="./img/pic1.png" alt="" width="40" height="40"></td>
+                    <td>03/11/2023</td>
+                    <td>
+                        <button>view</button>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Pak Luhut datang ke IT DEL</td>
+                    <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+                    <td><img src="./img/pic1.png" alt="" width="40" height="40"></td>
+                    <td>03/11/2023</td>
+                    <td>
+                        <button>view</button>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Pak Luhut datang ke IT DEL</td>
+                    <td>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</td>
+                    <td><img src="./img/pic1.png" alt="" width="40" height="40"></td>
+                    <td>03/11/2023</td>
+                    <td>
+                        <button>view</button>
+                        <button>edit</button>
+                        <button>delete</button>
+                    </td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+        <footer>
+            <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+
+            <div class="pagination">
+                <!--
+                <button>prev</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>next</button>
+                -->
+            </div>
+
+        </footer>
+    </div>
+
+    <!--pop up form-->
+    <div class="dark_bg">
+        <div class="popup">
+            <header>
+                <h2 class="modalTitle">Isi Form Pengumuman</h2>
+                <button class="closeButton">&times;</button>
+            </header>
+            <div class="body">
+                <form action="#" id="formPengumuman">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload">
+                            <input type="file" name="" id="uploadimg" class="picture"> 
+                            
+                        </label>
+                        <img src="./img/image-solid.png" alt="" width="150" height="150" class="img">
+                    </div>
+                    <div class="inputFieldContainer">
+                        <div class="titleField">
+                            <div class="formControl">
+                                <label for="titleAnnouncement">Judul Pengumuman</label>
+                                <input type="text" name="" id="titleAnnouncement" placeholder="Masukkan Judul Pengumuman" required>
+                            </div>
+                        </div>
+                        <div class="descField">
+                            <div class="formControl">
+                                <label for="descAnnouncement">Deskripsi Pengumuman</label>
+                                <textarea id="descAnnouncement" rows="4" cols="50" placeholder="Masukkan Deskripsi Pengumuman" required></textarea>
+                            </div>
+                        </div>
+                        <div class="dateField">
+                            <div class="formControl">
+                                <label for="sdate">Tanggal Upload</label>
+                                <input type="date" name="" id="sdate" placeholder="Pilih Tanggal" required>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer class="popupFooter">
+                <button form="formPengumuman" class="submitBtn">Submit</button>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="app.js">
+    </script>
+
+</body>
+
+
+</html>
