@@ -20,7 +20,7 @@ h2 {
   margin-top: 50px;
   margin-left: 50px;
   padding: 0;
-  text-align: left;
+  text-align: center;
   font-family: "Raleway", sans-serif;
 }
 h3 {
@@ -46,7 +46,7 @@ h3 {
 }
 
 .teks-logo {
-  margin-right: 250px; /* Menambahkan margin ke sisi kanan */
+  margin-right: 240px; /* Menambahkan margin ke sisi kanan */
   font-family: "Raleway", sans-serif;
 }
 /* Mengatur ukuran teks logo */
@@ -87,56 +87,6 @@ h3 {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
 }
-
-.icon_menu {
-  --s: 25px; /* control the size */
-  --c: #f2f2f2; /* the color */
-
-  height: var(--s);
-  aspect-ratio: 1;
-  border: none;
-  padding: 0;
-  border-inline: calc(var(--s) / 2) solid #0000;
-  box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
-  background: var(--_g2) left var(--_p, 0px) top, var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top, var(--_g2) right var(--_p, 0px) top, var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
-  background-size: 20% 80%, 40% 100%;
-  position: relative;
-  clip-path: inset(0 25%);
-  cursor: pointer;
-  transition: background-position 0.3s var(--_s, 0.3s), clip-path 0s var(--_s, 0.6s);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.icon_menu:before,
-.icon_menu:after {
-  content: "";
-  position: absolute;
-  border-radius: var(--s);
-  inset: 40% 0;
-  background: var(--c);
-  transition: transform 0.3s calc(0.3s - var(--_s, 0.3s));
-}
-
-.icon_menu:checked {
-  clip-path: inset(0);
-  --_p: calc(-1 * var(--s));
-  --_s: 0s;
-}
-.icon_menu:checked:before {
-  transform: rotate(45deg);
-}
-.icon_menu:checked:after {
-  transform: rotate(-45deg);
-}
-.icon_menu:focus-visible {
-  clip-path: none;
-  border: none;
-  outline: 2px solid var(--c);
-  outline-offset: 5px;
-}
 /* end navbar */
 
 /* footer */
@@ -160,7 +110,7 @@ h3 {
 
 .address {
   flex-grow: 1;
-  margin-left: 50px;
+  margin-left: 20px;
   margin-right: 0px;
 }
 
@@ -214,16 +164,27 @@ h3 {
   padding: 10px;
 }
 .copyright p {
-  margin-top: 0px;
-  margin-left: 60px;
+  text-align: center;
 }
 /* end footer */
 
 /*------------------------------------------------------------- Dasboard.html-----------------------------------------------------------*/
 /* Carousel */
+
 .carousel {
   margin-left: 0%;
   margin-right: 0%;
+}
+.gambar-pendukung {
+  width: 100%;
+  height: 870px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gambar-pendukung img {
+  width: 100%;
+  display: block;
 }
 
 ul.slides {
@@ -430,9 +391,16 @@ input:checked + .slide-container .nav label {
 /* Pengumuman */
 .pengumuman {
   background-color: #f9f9f9;
-  height: 770px;
+  height: 720px;
   padding: 2px;
 }
+
+.pengumuman-1 {
+  background-color: #fff;
+  height: 690px;
+  padding: 2px;
+}
+
 .pengumuman h1 {
   font-size: 30px;
   margin-top: 50px;
@@ -448,7 +416,7 @@ input:checked + .slide-container .nav label {
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 10px;
-  position: relative; /* Tambahkan posisi relatif */
+  position: relative;
 }
 .card {
   width: 380px;
@@ -559,4 +527,72 @@ input:checked + .slide-container .nav label {
 .card2 img {
   width: 100%;
   height: auto;
+}
+
+/*-------------------------------------------------------------Pengumuman.html-----------------------------------------------------------*/
+
+.teks-pengumuman {
+  background-color: #0477bf;
+  height: 190px;
+  width: 50%;
+  position: relative;
+  top: -170px;
+  border-radius: 3px;
+  margin-left: 65px;
+}
+.teks-pengumuman h1 {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #f2f2f2;
+}
+.teks-pengumuman p {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+.prodi {
+  background-color: #0477bf;
+  height: 70px;
+  width: 80%;
+  position: relative;
+  top: -90px;
+  border-radius: 3px;
+  margin-left: 40px;
+}
+.prodi h2 {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 0px;
+  margin-right: 10px;
+  padding: 5%;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #f2f2f2;
+  width: 300px;
+}
+
+.prodi-d4 {
+  background-color: #0477bf;
+  height: 90px;
+  width: 80%;
+  position: relative;
+  top: -90px;
+  border-radius: 3px;
+  margin-left: 40px;
+}
+.prodi-d4 h2 {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 2px;
+  padding: 5%;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #f2f2f2;
+  width: 300px;
 }
