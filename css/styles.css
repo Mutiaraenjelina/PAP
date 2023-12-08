@@ -82,10 +82,20 @@ h3 {
 
 .navbar-menu a {
   text-decoration: none;
-  color: #f2f2f2; /* Warna teks menu, bisa disesuaikan */
+  color: #cfcfcf; /* Warna teks menu, bisa disesuaikan */
   font-weight: bold;
   font-size: 16px;
   font-family: "Raleway", sans-serif;
+}
+
+/* Tambahkan aturan berikut untuk efek hover dan klik */
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: #fff; /* Warna teks saat dihover atau aktif, bisa disesuaikan */
+}
+
+.dashboard-link {
+  color: #fff !important; /* Warna putih terang dari awal */
 }
 /* end navbar */
 
@@ -190,7 +200,7 @@ h3 {
 ul.slides {
   display: block;
   position: relative;
-  height: 550px;
+  height: 700px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -332,6 +342,16 @@ input:checked + .slide-container .nav label {
   text-align: center; /* Menjadikan judul terpusat */
   font-family: "Raleway", sans-serif;
 }
+.teks-pendidikan {
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 48px;
+}
+.teks-prodi {
+}
 
 /* gambar dan teks konten sambutan*/
 
@@ -379,6 +399,7 @@ input:checked + .slide-container .nav label {
   cursor: pointer; /* Pointer ketika diarahkan */
   transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
   float: right;
+  margin-right: 0px;
   font-family: "Albert Sans", Helvetica, Arial, sans-serif;
   letter-spacing: 0.24px;
   font-size: 16px;
@@ -387,17 +408,35 @@ input:checked + .slide-container .nav label {
 .button_next:hover {
   background-color: #1f628c; /* Warna biru yang berbeda saat dihover */
 }
+.button_next_card_vertical {
+  background-color: #0477bf; /* Warna biru */
+  color: #ffffff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding pada tombol */
+  border: none; /* Hapus border */
+  border-radius: 4px; /* Sudut bulat pada tombol */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan sedikit */
+  cursor: pointer; /* Pointer ketika diarahkan */
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+  float: right;
+  margin-right: 65px;
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+}
+.button_next_card_vertical:hover {
+  background-color: #1f628c; /* Warna biru yang berbeda saat dihover */
+}
 
 /* Pengumuman */
 .pengumuman {
   background-color: #f9f9f9;
-  height: 720px;
+  height: 770px;
   padding: 2px;
 }
 
 .pengumuman-1 {
   background-color: #fff;
-  height: 690px;
+  height: 710px;
   padding: 2px;
 }
 
@@ -538,7 +577,7 @@ input:checked + .slide-container .nav label {
   position: relative;
   top: -170px;
   border-radius: 3px;
-  margin-left: 65px;
+  margin-left: 68px;
 }
 .teks-pengumuman h1 {
   padding: 20px;
@@ -595,4 +634,212 @@ input:checked + .slide-container .nav label {
   font-family: "Raleway", sans-serif;
   color: #f2f2f2;
   width: 300px;
+}
+/* halaman fasilitas */
+
+.gambar-pendukung-fasilitas {
+  width: 100%;
+  height: 770px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gambar-pendukung-fasilitas img {
+  width: 100%;
+  display: block;
+}
+
+.projcard-container {
+  margin: 50px 0;
+}
+
+/* Actual Code: */
+.projcard-container,
+.projcard-container * {
+  box-sizing: border-box;
+}
+.projcard-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1210px;
+}
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+  box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+  transform: translate(0px, -3px);
+}
+.projcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(-70deg, #424242, transparent 50%);
+  opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.projcard-img {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+  left: initial;
+  right: 0;
+}
+.projcard:hover .projcard-img {
+  transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+  width: 70px;
+}
+.projcard-textbox {
+  position: absolute;
+  top: 7%;
+  bottom: 7%;
+  left: 430px;
+  width: calc(100% - 470px);
+  font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+  left: initial;
+  right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ff0000bb;
+  background: #fff;
+  top: -20%;
+  left: -55px;
+  height: 140%;
+  width: 60px;
+  transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+  display: none;
+}
+.projcard-textbox::after {
+  display: none;
+  left: initial;
+  right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+  display: block;
+}
+.projcard-textbox * {
+  position: relative;
+}
+.projcard-title {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  font-size: 24px;
+}
+.projcard-subtitle {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  color: #888;
+}
+.projcard-bar {
+  left: -2px;
+  width: 50px;
+  height: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+.projcard-blue .projcard-bar {
+  background-color: #0088ff;
+}
+.projcard-blue::before {
+  background-image: linear-gradient(-70deg, #0088ff, transparent 50%);
+}
+.projcard-blue:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, #0088ff, transparent 50%);
+}
+.projcard-customcolor .projcard-bar {
+  background-color: var(--projcard-color);
+}
+.projcard-customcolor::before {
+  background-image: linear-gradient(-70deg, var(--projcard-color), transparent 50%);
+}
+.projcard-customcolor:nth-child(2n)::before {
+  background-image: linear-gradient(-250deg, var(--projcard-color), transparent 50%);
+}
+.projcard-description {
+  z-index: 10;
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #424242;
+  height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button_next_fasilitas {
+  background-color: #0477bf; /* Warna biru */
+  color: #ffffff; /* Warna teks putih */
+  padding: 10px 20px; /* Padding pada tombol */
+  border: none; /* Hapus border */
+  border-radius: 4px; /* Sudut bulat pada tombol */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan sedikit */
+  cursor: pointer; /* Pointer ketika diarahkan */
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+  float: right;
+  margin-right: 21px;
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+}
+
+.button_next_fasilitas:hover {
+  background-color: #1f628c; /* Warna biru yang berbeda saat dihover */
+}
+/* halaman lembaga */
+.konten-lembaga h1 {
+  font-family: "Voces", "Open Sans", arial, sans-serif;
+  font-size: 35px;
+  margin-top: 0px;
+  max-width: 580px; /* Sesuaikan lebar teks sesuai kebutuhan */
+  text-align: left; /* Sesuaikan sesuai keinginan Anda (left, right, atau center) */
+}
+
+.teks-lembaga {
+  margin-top: 0px;
+  max-width: 580px; /* Sesuaikan lebar teks sesuai kebutuhan */
+  text-align: left; /* Sesuaikan sesuai keinginan Anda (left, right, atau center) */
+  font-family: "Albert Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.24px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
 }
